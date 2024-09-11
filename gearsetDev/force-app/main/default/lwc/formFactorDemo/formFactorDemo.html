@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title="Form Factor Demo">
+         <lightning-button label="New" slot="actions"></lightning-button>
+            <p class="slds-p-horizontal_small"><lightning-button variant="brand" label="Create Account" title="Create Account" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            </p>
+    </lightning-card>
+    
+    <template if:true={showDesktopForm}>
+        <c-desktop-form></c-desktop-form>
+    </template>
+    <template if:true={showMobileForm}>
+        <c-mobile-form></c-mobile-form>
+    </template>
+</template>
