@@ -6,4 +6,8 @@ public class AccountCtrl {
     public static Map<Id, Account> getAccountsWithId(){
         return new Map<Id, Account>([SELECT id, Name FROM Account]);
     }
+
+    public static List<Account> getAccountsByName(String accName){
+        return [SELECT Id, Name FROM Account WHERE Name LIKE :accName];
+    }
 }
